@@ -21,3 +21,4 @@ volumes:
 
 networks:
     behind-nginx:
+        name: behind-nginx-network
