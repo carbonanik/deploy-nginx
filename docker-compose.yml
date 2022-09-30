@@ -1,0 +1,22 @@
+services:
+    nginx:
+        build: ./image
+        ports:
+            - 443:443
+            - 80:80
+        restart: always
+        networks:
+            - behind-nginx
+        volumes:
+            - letsencrypt:/etc/letsencrypt
+
+volumes:
+    letsencrypt:
+        driver: local
+        driver_opts:
+            o: bind
+            type: none
+            device: /etc/letsencrypt
+
+networks:
+    behind-nginx:
