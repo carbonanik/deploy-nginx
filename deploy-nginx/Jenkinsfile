@@ -11,7 +11,7 @@ pipeline {
         stage('start nginx') {
             steps {
                 sh 'ls'
-                sh 'cd deploy-nginx'
+                sh 'cd deploy-nginx/'
                 sh 'ls'
                 sh 'docker compose up -d --build'
                 sh 'docker compose ps'
