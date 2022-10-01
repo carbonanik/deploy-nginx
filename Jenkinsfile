@@ -10,7 +10,7 @@ pipeline {
         }
         stage('start nginx') {
             steps {
-                sh 'docker compose -f deploy-nginx/docker-compose.yml up -d --build'
+                sh 'docker compose up -d --build'
                 sh 'docker compose ps'
             }
         }
