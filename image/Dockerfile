@@ -1,5 +1,5 @@
 FROM nginx:1.23.1-alpine
 
-COPY nginx.conf /etc/nginx/nginx.conf
+COPY . /etc/nginx/
 
-EXPOSE 80 443 9090
+EXPOSE 80 443 7851
